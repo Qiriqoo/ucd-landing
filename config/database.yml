@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: ucd-landing_development
+  pool: 5
+  host: localhost
+  username: sdiallo
+  password: sdiallo88
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: ucd-landing_test
+  host: localhost
+  pool: 5
+  username: sdiallo
+  password: sdiallo88
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: ucd-landing_production
+  host: localhost
+  pool: 5
+  username: sdiallo
+  password: sdiallo88

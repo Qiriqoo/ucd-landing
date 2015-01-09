@@ -1,0 +1,20 @@
+#acceuil.col-md-12.col-sm-12.col-xs-12
+	.col-md-4.accueil-bloc.col-sm-12.col-xs-12.block
+		.contact-form.block
+			%h3.form-title
+				Inscrivez votre entreprise ici pour vous tenir au courant de l'ouverture du site !
+			= form_for @contact, class: 'form-group', method: :post, remote: true do |f|
+				.form-group
+					= f.text_field :name, class: 'form-control', placeholder: 'Nom de votre entreprise'
+				.form-group
+					= f.email_field :email, class: 'form-control', placeholder: 'Email'      
+				.form-group
+					= f.submit 'Envoyer', class: 'btn btn-default btn-lg btn-block'
+	.home-scroll-down
+		= link_to "#" do 
+			%i.glyphicon.glyphicon-chevron-down
+	.col-md-offset-3.col-md-3.col-xs-12.col-sm-12.ucd-logo.block
+		.img-responsive
+			= link_to root_path do
+				= image_tag 'ucd-logo.png'
+
