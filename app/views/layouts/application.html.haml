@@ -9,9 +9,10 @@
   %body
     #top.col-md-12.col-sm-12.col-xs-12
       .col-md-3.col-sm-12.col-xs-12.accroche.block
-        = image_tag 'ucd.png'
-        %p.text-accroche
-          est une société spécialisée dans le commerce interentreprise.
+        .accroche-bloc.block
+          = image_tag 'ucd.png'
+          %p.text-accroche
+            est une société spécialisée dans le commerce interentreprise.
       .col-md-offset-6.col-md-3.pdf-view.col-sm-12.col-xs-12.block
         = link_to "http://surlybikes.com//uploads/downloads/SURLY_2015_Catalog.pdf", target: "_blank" do
           %button.btn.btn-default.btn-block.btn-lg
@@ -21,33 +22,35 @@
     = yield
     #footer.col-md-12.col-xs-12.col-sm-12
       .col-md-offset-1.col-md-2.ucd-info.col-sm-12.col-xs-12.block
-        .title
-          = image_tag 'ucd.png'
+        %h2
+          Contact
 
         = link_to root_path do
           = image_tag 'ucd-logo.png', class: 'img-responsive'
         %address
-          %strong AU TOUTON
+          %strong Ultimate Cycle Distribution
           %br
-            RUE PASCAL CYTRON
+            AU TOUTON
             %br
-              32810 PREIGNAN FRANCE
+              RUE PASCAL CYTRON
               %br
-                %span.glyphicon.glyphicon-earphone
-                337 85 58 10 22
+                32810 PREIGNAN FRANCE
+                %br
+                  %span.glyphicon.glyphicon-earphone
+                  337 85 58 10 22
         
       .col-md-offset-2.col-md-7.parteners.col-sm-12.col-xs-12.block
         %h2
-          PARTENAIRES
+          Partenaires:
         .col-md-12.col-xs-12.col-sm-12.partenaires-bloc
-          .col-md-4.col-xs-12.col-sm-6.block
-            = link_to 'http://surlybikes.com/' do
+          .col-md-4.col-xs-12.col-sm-6.block.surly
+            = link_to 'http://surlybikes.com/', target: "_blank" do
               = image_tag 'surly_Logo.jpg', class: 'img-responsive'
           .col-md-4.col-xs-12.col-sm-6.block
-            = link_to 'http://45nrth.com/' do
+            = link_to 'http://45nrth.com/', target: "_blank" do
               = image_tag '45Nrth-logo-main.jpg', class: 'img-responsive'
           .col-md-4.col-xs-12.col-sm-6.block
-            = link_to 'http://www.problemsolversbike.com/' do
+            = link_to 'http://www.problemsolversbike.com/', target: "_blank" do
               = image_tag 'problemsolvers.png', class: 'img-responsive'
     #qiriqoo.col-md-12.col-xs-12.col-sm-12
       %p.pull-right
