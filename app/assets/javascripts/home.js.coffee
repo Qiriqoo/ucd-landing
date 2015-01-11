@@ -1,11 +1,5 @@
 $ ->
-  $(document).on "click", ".home-scroll-down a", ->
-    h = $("#footer").position().top
-    $("body,html").animate
-      scrollTop: h,
-      3000, "easeInOutQuint"
-      false
-      
+
   resizeback = ->
     h = $(window).height()
     $("#acceuil,.home-full,.home-doted").height h  if h > 500

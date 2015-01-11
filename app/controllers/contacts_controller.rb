@@ -6,8 +6,9 @@ class ContactsController < ApplicationController
     respond_to do |format|
 
       if @contact.save
+        flash[:success] = 'votre entreprise a éte enregistrée'
         format.html do
-          redirect_to root_path, notice: 'votre entreprise a éte enregistrée'
+          redirect_to root_path 
         end
         format.js
       else

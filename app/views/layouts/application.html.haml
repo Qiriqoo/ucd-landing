@@ -8,52 +8,20 @@
     = csrf_meta_tags
   %body
     #top.col-md-12.col-sm-12.col-xs-12
-      .col-md-3.col-sm-12.col-xs-12.accroche.block
+      .col-md-3.col-sm-4.col-xs-12.accroche.block
         .accroche-bloc.block
           = image_tag 'ucd.png'
           %p.text-accroche
             est une société spécialisée dans le commerce interentreprise.
-      .col-md-offset-6.col-md-3.pdf-view.col-sm-12.col-xs-12.block
+      .col-md-offset-1.col-md-4.col-xs-12.col-sm-4.ucd-logo.block
+        .img-responsive
+          = link_to root_path do
+            = image_tag 'ucd-logo.png'
+      .col-md-offset-2.col-md-2.pdf-view.col-sm-4.col-xs-12.block
         = link_to "http://surlybikes.com//uploads/downloads/SURLY_2015_Catalog.pdf", target: "_blank" do
           %button.btn.btn-default.btn-block.btn-lg
-            voir le catalogue de surly
-    = flash[:error]
-    = flash[:notice]
+            voir le catalogue 2015 de surly
     = yield
-    #footer.col-md-12.col-xs-12.col-sm-12
-      .col-md-offset-1.col-md-2.ucd-info.col-sm-12.col-xs-12.block
-        %h2
-          Contact
 
-        = link_to root_path do
-          = image_tag 'ucd-logo.png', class: 'img-responsive'
-        %address
-          %strong Ultimate Cycle Distribution
-          %br
-            AU TOUTON
-            %br
-              RUE PASCAL CYTRON
-              %br
-                32810 PREIGNAN FRANCE
-                %br
-                  %span.glyphicon.glyphicon-earphone
-                  337 85 58 10 22
-        
-      .col-md-offset-2.col-md-7.parteners.col-sm-12.col-xs-12.block
-        %h2
-          Partenaires:
-        .col-md-12.col-xs-12.col-sm-12.partenaires-bloc
-          .col-md-4.col-xs-12.col-sm-6.block.surly
-            = link_to 'http://surlybikes.com/', target: "_blank" do
-              = image_tag 'surly_Logo.jpg', class: 'img-responsive'
-          .col-md-4.col-xs-12.col-sm-6.block
-            = link_to 'http://45nrth.com/', target: "_blank" do
-              = image_tag '45Nrth-logo-main.jpg', class: 'img-responsive'
-          .col-md-4.col-xs-12.col-sm-6.block
-            = link_to 'http://www.problemsolversbike.com/', target: "_blank" do
-              = image_tag 'problemsolvers.png', class: 'img-responsive'
-    #qiriqoo.col-md-12.col-xs-12.col-sm-12
-      %p.pull-right
-        powerred by qiriqoo   
 
     = javascript_include_tag 'application'

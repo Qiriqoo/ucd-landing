@@ -1,5 +1,7 @@
 html body
-  margin: 0
+  max-width: 100%
+  overflow-x: hidden
+  overflow-x:hidden
   position: relative
   height: 100%
 .btn-default 
@@ -14,7 +16,7 @@ html body
   background-color: none
   top: 0
   position: fixed
-  margin-top: 15px
+
   .pdf-view
   .pdf-button
     color: black
@@ -43,23 +45,26 @@ html body
   width: 100%
   text-align: center
   background: transparent
+  left: 0 !important
   opacity: 0.8
-  a 
-    background: rgba(0,0,0,0.4)
-    color: #fff
-    padding: 5px 15px
-    text-decoration: none
-    display: inline-block
+  overflow: hidden
+  min-height: 380px
+  &:hover
+    #footer
+      opacity: 1
+    .footer-contenaire
+      top: 0
+
+#flash-msg
+  position: relative
+  top: 170px
+  z-index: 50000
+
 
 .ucd-logo
-  position: fixed
-  margin: 0 auto
-  top: -20px
   text-align: center
-  z-index: 50
-  left: 700px
   img
-    width: 100%
+    width: 70%
 
 
 #acceuil
@@ -73,8 +78,8 @@ html body
   margin-bottom: 0
   
   .accueil-bloc
-    position: fixed
-    top: 182px
+    position: relative
+    top: 250px
   
   .contact-form
     background-color: rgba(19, 17, 17, 0.67)
@@ -82,10 +87,25 @@ html body
     
     text-align: center
 #footer
-  color: white
-  background: black
+  position: relative
+  width: 100%
+  min-height: 380px
+  opacity: 0
   z-index: 500
-  position:relative
+  color: white
+  font-size: 12px
+  background-color: black
+  -webkit-transition: opacity .30s ease-in-out
+  -moz-transition: opacity .30s ease-in-out
+.footer-contenaire
+  position: absolute
+  top: 400px
+  left: 0
+  -webkit-transition: top .8s ease-in-out
+  -moz-transition: top .8s ease-in-out
+  p
+    font-size: 12px
+
   .ucd-info
     text-align: center
     p
@@ -104,7 +124,7 @@ html body
       margin-top: 35px
   .partenaires-bloc
     margin-top: 25px
-#qiriqoo
-  background-color: rgba(0, 0, 0, 0.93)
-  color: white
+  #qiriqoo
+    background-color: rgba(0, 0, 0, 0.93)
+    color: white
 
