@@ -1,9 +1,0 @@
-<% if @errors.present? %>
-
-	<% @errors.each do |error_msg| %>
-		$("#contact_<%= error_msg[0] %>").after("<%= escape_javascript(render :partial => 'contacts/_errors_msg', :locals => {:errors => error_msg}) %>");
-	<% end %>
-
-<% else %>
-	console.log "votre entreprise a été enregistrée"
-<% end %>

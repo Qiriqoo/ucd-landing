@@ -6,17 +6,14 @@ class ContactsController < ApplicationController
     respond_to do |format|
 
       if @contact.save
-        flash[:success] = 'votre entreprise a éte enregistrée'
+        flash[:success] = 'votre email a été enregistrée'
         format.html do
           redirect_to root_path 
         end
-        format.js
       else
+        flash[:danger] = 'Veuillez remplir correctement votre email'
         format.html do
-          redirect_to root_path, nottice: 'errors in form'
-        end
-        format.js do
-          @errors = @contact.errors.messages
+          redirect_to root_path
         end
       end
     end
@@ -26,7 +23,7 @@ class ContactsController < ApplicationController
   private
 
     def contact_params
-      params.require(:contact).permit(:name, :email)      
+      params.require(:contact).permit(:email)      
     end
 
 end

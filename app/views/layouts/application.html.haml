@@ -8,20 +8,19 @@
     = csrf_meta_tags
   %body
     #top.col-md-12.col-sm-12.col-xs-12
-      .col-md-3.col-sm-4.col-xs-12.accroche.block
-        .accroche-bloc.block
-          = image_tag 'ucd.png'
-          %p.text-accroche
-            est une société spécialisée dans le commerce interentreprise.
-      .col-md-offset-1.col-md-4.col-xs-12.col-sm-4.ucd-logo.block
+      .col-md-4.col-xs-12.col-sm-4.ucd-logo.block
         .img-responsive
           = link_to root_path do
             = image_tag 'ucd-logo.png'
-      .col-md-offset-2.col-md-2.pdf-view.col-sm-4.col-xs-12.block
+      .col-md-offset-6.col-md-2.pdf-view.col-sm-4.col-xs-12.block
         = link_to "http://surlybikes.com//uploads/downloads/SURLY_2015_Catalog.pdf", target: "_blank" do
           %button.btn.btn-default.btn-block.btn-lg
             voir le catalogue 2015 de surly
-    = yield
+    #acceuil.col-md-12.col-sm-12.col-xs-12
+      #flash-msg.col-md-offset-4.col-md-4.col-sm-6.col-xs-12.block
+        - flash.each do |key, msg|
+          = content_tag(:div, msg, class: "alert alert-#{key}")
+      = yield
 
 
     = javascript_include_tag 'application'

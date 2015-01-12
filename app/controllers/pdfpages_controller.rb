@@ -1,5 +1,4 @@
 class PdfpagesController < ApplicationController
-
   
   def show
     page = params[:id]
