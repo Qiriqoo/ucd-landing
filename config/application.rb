@@ -18,6 +18,16 @@ module UcdLanding
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.default_locale = :fr
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      address: 'smtp.mandrillapp.com',
+      port: 587,
+      domain: 'ultimate-cycle-distribution.com',
+      user_name: ENV['MANDRILL_USERNAME'] || Rails.application.secrets.mandrill_username,
+      password: ENV['MANDRILL_APIKEY'] || Rails.application.secrets.mandrill_key,
+      authentication: 'login',
+      enable_starttls_auto: true
+    }
   end
 end

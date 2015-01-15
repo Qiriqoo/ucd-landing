@@ -1,17 +1,7 @@
-html body
-  max-width: 100%
+body
+  margin: 0
   overflow-x: hidden
-  overflow-x:hidden
-  position: relative
-  height: 100%
-  background-image: url('Surly_Bike.jpg')
-  display: block
-  background-size: 100% 100%
-  background-position: center center
-  background-repeat: no-repeat
-  background-attachment: fixed
-  width: 100%
-  margin-bottom: 0
+
 .btn-default 
   color: white
   background-color: rgb(197, 103, 41)
@@ -34,27 +24,20 @@ html body
   color: #fff
   font-size: 30px
   position: absolute
-  bottom: 0px
+  bottom: 0
+  margin: 0
+  padding: 0
   width: 100%
   text-align: center
   background: transparent
-  left: 0 !important
-  opacity: 0.8
-  overflow: hidden
-
-  .fleche 
+  z-index: 50
+  a
     background: rgba(0,0,0,0.4)
     color: #fff
     padding: 5px 15px
     bottom: 0px
     text-decoration: none
     display: inline-block
-    z-index: 50000
-  &:hover
-    #footer
-      opacity: 1
-    .footer-contenaire
-      top: 0
 
 #flash-msg
   position: relative
@@ -65,32 +48,33 @@ html body
     width: 60%
 
 
-#acceuil  
+#acceuil
+#acceuil-back
+  background-image: url('back-bike.jpg')
+  background-size: 100% 
+  background-size: cover
+  position: absolute
+  background-position: center center
+  background-repeat: no-repeat
+  width: 100%
+  height: 100%
+  bottom: 0px
+  z-index: 1
   .accueil-bloc
     position: relative
-    top: 200px
+    top: 270px
   
   .contact-form
     background-color: rgba(19, 17, 17, 0.67)
     color: white    
     text-align: center
 #footer
-  position: relative
   width: 100%
-  min-height: 300px
-  opacity: 0
-  z-index: 5
+  z-index: 5000
   color: white
   font-size: 12px
   background-color: black
-  -webkit-transition: opacity .30s ease-in-out
-  -moz-transition: opacity .30s ease-in-out
 .footer-contenaire
-  position: absolute
-  top: 400px
-  left: 0
-  -webkit-transition: top .8s ease-in-out
-  -moz-transition: top .8s ease-in-out
   .ucd-info
     text-align: center
     .mail
