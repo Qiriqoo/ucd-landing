@@ -5,7 +5,7 @@
         - flash.each do |key, msg|
           = content_tag(:div, msg, class: "alert alert-#{key}")
       .contact-form.block
-        %h3.form-title
+        %h3.form-title.pull-left
           Pour être informé de l’ouverture du site, inscrivez vous à la newsletter !
         = form_for @contact, class: 'form-group', method: :post do |f|
           .form-group
