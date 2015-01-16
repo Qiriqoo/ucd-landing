@@ -14,7 +14,7 @@ $ ->
     resizeback()
 	$("body").scrollspy {target: "#home-button"}
 
-	$(document).on "click", "#link-button", (e)->
+	$(document).on "click", ".link-button", (e)->
 		e.preventDefault()
 		target = $(this).attr('data-link')
 		targetBlockTop = $(document).find("#" + target)

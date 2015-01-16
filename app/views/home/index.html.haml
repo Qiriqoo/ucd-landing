@@ -1,19 +1,7 @@
 #acceuil.col-md-12.col-sm-12.col-xs-12
   #acceuil-back
-    .col-md-4.accueil-bloc.col-sm-6.col-xs-12.block
-      #flash-msg
-        - flash.each do |key, msg|
-          = content_tag(:div, msg, class: "alert alert-#{key}")
-      .contact-form.block
-        %h3.form-title
-          Pour être informé de l’ouverture du site, inscrivez vous à la newsletter !
-        = form_for @contact, class: 'form-group', method: :post do |f|
-          .form-group
-            = f.email_field :email, class: 'form-control', placeholder: 'Email'
-          .form-group
-            = f.submit "S'inscrire", class: 'btn btn-default btn-block'
 #home-button.col-md-12.col-sm-12.col-xs-12.home-scroll-down
-  = link_to "#footer", id: "link-button", data: {link: 'footer'} do
+  = link_to "#footer", class: "link-button", data: {link: 'footer'} do
     %i.glyphicon.glyphicon-chevron-down
 #footer.col-md-12.col-sm-12.col-xs-12
   .footer-contenaire
@@ -38,5 +26,8 @@
         .col-md-4.col-xs-12.col-sm-4.block
           = link_to 'http://www.problemsolversbike.com/', target: "_blank" do
             = image_tag 'problemsolvers.png', class: 'img-responsive'
+  .col-md-12.col-sm-12.col-xs-12.home-scroll-down
+    = link_to "#top", class: "link-button", data: {link: 'top'} do
+      %i.glyphicon.glyphicon-chevron-up
 
 
