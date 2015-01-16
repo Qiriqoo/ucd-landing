@@ -8,12 +8,12 @@
     = csrf_meta_tags
   %body
     #top.col-md-12.col-sm-12.col-xs-12
-      .col-md-offset-4.col-md-4.col-xs-12.col-sm-4.ucd-logo.block
+      .col-md-offset-4.col-md-4.col-xs-12.col-sm-6.ucd-logo.block
         .img-responsive
           = link_to root_path do
             = image_tag 'ucd-logo.png'
-      .col-md-offset-1.col-md-2.pdf-view.col-sm-4.col-xs-12.block
-        = link_to "http://surlybikes.com//uploads/downloads/SURLY_2015_Catalog.pdf", target: "_blank" do
+      .col-md-offset-1.col-md-3.pdf-view.col-sm-6.col-xs-12.block
+        = link_to "http://surlybikes.com//uploads/downloads/SURLY_2015_Catalog.pdf", class: "surly-link", target: "_blank" do
           %button.btn.btn-default.btn-block.btn-lg
             voir le catalogue 2015 de surly
 

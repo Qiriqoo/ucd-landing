@@ -12,8 +12,8 @@
             = f.email_field :email, class: 'form-control', placeholder: 'Email'
           .form-group
             = f.submit "S'inscrire", class: 'btn btn-default btn-block'
-.col-md-12.col-sm-12.col-xs-12.home-scroll-down
-  = link_to "#footer", class: "link-button" do
+#home-button.col-md-12.col-sm-12.col-xs-12.home-scroll-down
+  = link_to "#footer", id: "link-button", data: {link: 'footer'} do
     %i.glyphicon.glyphicon-chevron-down
 #footer.col-md-12.col-sm-12.col-xs-12
   .footer-contenaire

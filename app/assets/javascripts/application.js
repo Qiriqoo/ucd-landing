@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap/collapse
+//= require bootstrap/scrollspy
 //= require_tree .

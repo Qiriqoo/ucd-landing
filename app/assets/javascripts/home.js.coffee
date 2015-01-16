@@ -12,12 +12,12 @@ $ ->
 
   $(document).ready ->
     resizeback()
-	$("body").scrollspy {target: ".home-scroll-down"}
+	$("body").scrollspy {target: "#home-button"}
 
-	$(document).on "click", ".link-button", (e)->
+	$(document).on "click", "#link-button", (e)->
 		e.preventDefault()
 		target = $(this).attr('data-link')
 		targetBlockTop = $(document).find("#" + target)
 		$("body, html").animate
 			scrollTop: targetBlockTop.position().top
-		, 600, 'linear'
+		, 900, 'linear'
