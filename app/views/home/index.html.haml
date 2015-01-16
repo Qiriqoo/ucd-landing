@@ -1,11 +1,11 @@
 #acceuil.col-md-12.col-sm-12.col-xs-12
   #acceuil-back
     .col-md-4.accueil-bloc.col-sm-6.col-xs-12.block
-      #flash-msg.col-md-offset-1.col-md-4.col-sm-6.col-xs-12.block
+      #flash-msg
         - flash.each do |key, msg|
           = content_tag(:div, msg, class: "alert alert-#{key}")
       .contact-form.block
-        %h3.form-title.pull-left
+        %h3.form-title
           Pour être informé de l’ouverture du site, inscrivez vous à la newsletter !
         = form_for @contact, class: 'form-group', method: :post do |f|
           .form-group
