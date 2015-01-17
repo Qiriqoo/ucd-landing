@@ -8,6 +8,15 @@ body
   border-color: #cccccc
 .col-md-12.col-sm-12.col-xs-12
   padding-left: 0
+.accordion-toggle
+  &:after
+    font-family: 'Glyphicons Halflings'
+    content: "\e114"
+    color: rgb(197, 103, 41)
+
+.accordion-toggle.collapsed
+  &:after
+    content: "\e113"
 
 .block
   padding: 25px 15px
@@ -18,7 +27,7 @@ body
   position: fixed
 
   .contact-form
-    background-color: rgba(19, 17, 17, 0.67)
+    background-color: rgba(19, 38, 81, 0.67)
     color: white
     text-align: center
   .pdf-view
@@ -39,9 +48,9 @@ body
   text-align: center
   background: transparent
   z-index: 50
-  a
-    background: black
-    color: #fff
+  .link-button
+    background: rgba(19, 38, 81, 0.67)
+    color: rgb(197, 103, 41)
     padding: 5px 15px
     bottom: 0px
     text-decoration: none
@@ -52,18 +61,20 @@ body
 
 
 .ucd-logo
+  text-align: center
   img
     width: 65%
 
 
 #acceuil
 #acceuil-back
-  background-image: url('back-bike.jpg')
+  background-image: url('kenai-fat-bike.jpg')
   background-size: 100% 
   background-size: cover
   position: absolute
   background-position: center center
   background-repeat: no-repeat
+
   width: 100%
   height: 100%
   bottom: 0px
@@ -75,9 +86,13 @@ body
   color: white
   font-size: 12px
   background-color: black
+  -webkit-transition: top .8s ease-in-out
+  -moz-transition: top .8s ease-in-out
 .footer-contenaire
   .ucd-info
     text-align: center
+    h4
+      text-align: left
     .mail
       font-size: 16px
   .parteners
