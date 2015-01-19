@@ -1,8 +1,7 @@
 $ ->
-
-  $("#home-button").on "shown.bs.collapse", ->
+  $("#home-button").on "shown.bs.collapse", (e) ->
     e.preventDefault()
-    panel = $(document).find(".in")
+    panel = $(document).find("#footer")
     $("html, body").animate
       scrollTop: panel.offset().top
     , 500, 'linear'
