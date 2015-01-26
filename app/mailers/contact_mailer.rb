@@ -1,6 +1,6 @@
 class ContactMailer < ActionMailer::Base
   default from: 'Ultimate Cycle Distribution <contact@ultimate-cycle-distribution.com>'
-  @@admins = ['picard.fabrice.fp@gmail.com']
+  @@admins = ['fp.fabricepicard@gmail.com']
 
   def confirm_mail contact
     @contact = contact
