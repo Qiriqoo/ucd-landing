@@ -15,8 +15,16 @@ class ContactMailer < ActionMailer::Base
     mail(
       to: admins.slice!(0),
       subject: 'un nouvel utilisateur s\'est inscrit sur le site'
+    )    
+  end
+
+  def ucd_contact recipient
+    admins = @@admins
+    mail(
+      to: admins.slice!(0)
+      from: recipient.from_email
+      subject: recipient.subject      
     )
-    
   end
 
 end
