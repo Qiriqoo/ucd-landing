@@ -7,7 +7,7 @@ class InboxController < ApplicationController
 
     recipient.from_email = payload['from_email']
     recipient.subject = payload['subject']
-    recipient.msg = payload['html']
+    recipient.msg = payload['text']
     recipient.save!
   end
 end
