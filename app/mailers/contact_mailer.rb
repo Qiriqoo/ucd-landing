@@ -22,8 +22,8 @@ class ContactMailer < ActionMailer::Base
     admins = @@admins
     @recipient = recipient
     mail(
-      to: admins.slice!(0)
-      from: recipient.from_email
+      to: admins.slice!(0),
+      from: recipient.from_email,
       subject: recipient.subject      
     )
   end
