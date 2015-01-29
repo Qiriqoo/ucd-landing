@@ -20,6 +20,7 @@ class ContactMailer < ActionMailer::Base
 
   def ucd_contact recipient
     admins = @@admins
+    @recipient = recipient
     mail(
       to: admins.slice!(0)
       from: recipient.from_email
