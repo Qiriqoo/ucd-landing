@@ -22,7 +22,7 @@ class ContactMailer < ActionMailer::Base
     admins = @@admins
     @recipient = recipient
     mail(
-      to: admins.slice!(0),
+      to: recipient.user.gmail,
       from: recipient.from_email,
       subject: recipient.subject      
     )
