@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-	belongs_to :recipient
+	has_many :recipients
 end
