@@ -22,7 +22,7 @@ class ContactMailer < ActionMailer::Base
     @recipient = recipient
     attachments.each do |attachment|
       mail.attachments[attachment.name] = { mime_type: attachment.type,
-                                            content: attachment.content}
+                                            content: attachment.decoded_content}
     end
     mail(
       to: recipient.user.gmail,
