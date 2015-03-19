@@ -22,7 +22,7 @@ class ContactMailer < ActionMailer::Base
     @recipient = recipient
     if attachments = event_payload.attachments.presence
       attachment = attachments.first
-      attachments[attachment.name] = {mime_type: attachment.type,
+      mail.attachments[attachment.name] = { mime_type: attachment.type,
                                       content: attachment.decoded_content}
     end
     mail(
