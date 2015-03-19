@@ -16,6 +16,7 @@ class InboxController < ApplicationController
       rescue Mandrill::Error => e
         Rails.logger.debug("#{e.class}: #{e.message}")
         raise
+      end
     end
   end
 end

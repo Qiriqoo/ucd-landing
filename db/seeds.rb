@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.create!([{inbound_mail: 'contact@ultimate-cycle-distribution.com', gmail: 'fp.fabricepicard@gmail.com'},
               {inbound_mail: 'fpicard@ultimate-cycle-distribution.com', gmail: 'picard.fabrice.fp@gmail.com'},
-              {inbound_mail: 'sdiallo@ultimate-cycle-distribution.com', gmail: 'fpicard321@gmail.com'}])
+              {inbound_mail: 'sdiallo@ultimate-cycle-distribution.com', gmail: 'qiriqoo@gmail.com'}])
