@@ -10,6 +10,12 @@ class InboxController < ApplicationController
     recipient.from_email = payload['from_email']
     recipient.subject = payload['subject']
     recipient.msg = payload['text']
-    recipient.save!
+    if recipient.save!
+      ContactMailer.ucd_contact(recipient event_payload).deliver
+    else
+      rescue Mandrill::Error => e
+        Rails.logger.debug("#{e.class}: #{e.message}")
+        raise
+    end
   end
 end

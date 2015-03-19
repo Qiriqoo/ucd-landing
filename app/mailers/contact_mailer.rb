@@ -18,8 +18,12 @@ class ContactMailer < ActionMailer::Base
     )    
   end
 
-  def ucd_contact recipient
-    admins = @@admins
+  def ucd_contact recipient event_payload
+    if attachments = event_payload.attachments.presence
+      attachments.each do |attachment|
+        attachments[attachment.name] = File.read(attachment.decoded_content)
+      end
+    end
     @recipient = recipient
     mail(
       to: recipient.user.gmail,
