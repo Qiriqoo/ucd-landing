@@ -11,7 +11,7 @@ class InboxController < ApplicationController
     recipient.subject = payload['subject']
     recipient.msg = payload['text']
     if recipient.save!
-      ContactMailer.ucd_contact(recipient event_payload).deliver
+      ContactMailer.ucd_contact(recipient, event_payload).deliver
     end
   end
 
