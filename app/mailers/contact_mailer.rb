@@ -18,12 +18,11 @@ class ContactMailer < ActionMailer::Base
     )    
   end
 
-  def ucd_contact(recipient, event_payload)
+  def ucd_contact(recipient, attachments=[])
     @recipient = recipient
-    if attachments = event_payload.attachments.presence
-      attachment = attachments.first
+    attachments.each do |attachment|
       mail.attachments[attachment.name] = { mime_type: attachment.type,
-                                      content: attachment.decoded_content}
+                                            content: attachment.content}
     end
     mail(
       to: recipient.user.gmail,
