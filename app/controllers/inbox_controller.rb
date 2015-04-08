@@ -10,15 +10,8 @@ class InboxController < ApplicationController
     recipient.from_email = payload['from_email']
     recipient.subject = payload['subject']
     recipient.msg = payload['text']
-    if attachments = event_payload.attachments.presence
-      if recipient.save!
-        ContactMailer.ucd_contact(recipient, attachments).deliver
-      end
-    else
-      if recipient.save!
-        ContactMailer.ucd_contact(recipient, []).deliver
-      end
-    end
+    recipient.save!
+    ContactMailer.ucd_contact(recipient, event_payload.attachments).deliver
   end
 
 end

@@ -18,7 +18,7 @@ class ContactMailer < ActionMailer::Base
     )    
   end
 
-  def ucd_contact(recipient, attachments=[])
+  def ucd_contact(recipient, attachments = [])
     @recipient = recipient
     attachments.each do |attachment|
       mail.attachments[attachment.name] = { mime_type: attachment.type,
